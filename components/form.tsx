@@ -23,7 +23,7 @@ import ProgressUpload from "@/components/ui/progress-upload";
 import ColorPicker from "@/components/ui/color-picker";
 
 const profileFormSchema = z.object({
-	file: z.instanceof(FileList).optional(),
+	// file: z.instanceof(FileList).optional(),
 	description: z.string().max(160).min(4),
 	title: z.string().max(50).min(1, {
 		message: "Title must be at least 1 characters.",
@@ -57,7 +57,7 @@ export function ProfileForm() {
 		});
 	}
 
-	const fileRef = form.register("file");
+	// const fileRef = form.register("file");
 
 	return (
 		<Form {...form}>
